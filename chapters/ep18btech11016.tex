@@ -20,17 +20,34 @@ The corner frequencies can be calculated as follows:
     slope = \cfrac{M_2 - M_1}{log\omega_2 - log\omega_1}\\
 \end{align*}
 
-Therefore for $\omega_{02}$,\\
--40 = \cfrac{0 - 12}{log8 - log\omega_{02}}\\
-log8 - log$\omega$_{02} = \cfrac{12}{40}\\
-log$\omega_{02}$ = log8 - \cfrac{12}{40}\\
-$\omega_{02}$ = 4\\
+Therefore for $\omega_{02}$,
+\begin{align*}
+    -40 = \cfrac{0 - 12}{log8 - log\omega_{02}}
+\end{align*}
+\begin{align*}
+    log8 - log\omega_{02} = \cfrac{12}{40}
+\end{align*}
+\begin{align*}
+    log\omega_{02} = log8 - \cfrac{12}{40}
+\end{align*}
+\begin{align*}
+    \omega_{02} = 4
+\end{align*}
 
-And for $\omega_{01}$,\\
-20 = \cfrac{0 - 12}{log0.5 - log$\omega_{01}$}\\
-log0.5 - log$\omega_{01}$ = \cfrac{-12}{20}\\
-log$\omega_{01}$ = log0.5 + \cfrac{12}{20}\\
-$\omega_{01}$ = 2\\
+And for $\omega_{01}$,
+\begin{align*}
+    20 = \cfrac{0 - 12}{log0.5 - log\omega_{01}}
+\end{align*}
+\begin{align}
+    log0.5 - log\omega_{01} = \cfrac{-12}{20}
+\end{align}{}
+\begin{align*}
+    log\omega_{01} = log0.5 + \cfrac{12}{20}
+\end{align*}
+\begin{align*}
+    \omega_{01} = 2
+\end{align*}
+
 So, the corner frequencies are $\omega_{01}$=2 and $\omega_{02}$ = 4.\\
 
 \item Find the transfer function from the calculated frequencies.\\
@@ -64,7 +81,7 @@ From the above given option, we can see that option (A) best represents our tran
 
 \item Verify the above plot by plotting the transfer function.\\
 \solution
-The bode plot is:
+The bode plot is Fig. \ref{fig:ep18btech11016_fig2}:
 \begin{center}
     \begin{figure}[!h]
     \centering
@@ -73,6 +90,7 @@ The bode plot is:
     \label{fig:ep18btech11016_fig2}
     \end{figure}
 \end{center}
+
 The plot was plotted using the following code:
 \lstinputlisting{./codes/ep18btech11016.py}
 
