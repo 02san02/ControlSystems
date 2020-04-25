@@ -53,6 +53,20 @@ So, the corner frequencies are $\omega_{01}$=2 and $\omega_{02}$ = 4.\\
 
 %----------------------------------------------------------------------------%
 
+\item Express the given bode plot as a piece-wise linear function.
+\\
+\solution
+\begin{align}
+ G(\omega) = 
+ \begin{cases} 
+        20\log 2\omega & 0 < \omega \leq 2 \\
+      12 & 2 \leq \omega \leq 4 \\
+      -40\log\cfrac{\omega}{8} & \omega \geq 4\\
+ \end{cases}
+\end{align}
+
+%----------------------------------------------------------------------------%
+
 \item Find the transfer function from the calculated frequencies.
 \\
 \solution
@@ -89,7 +103,7 @@ here c is some constant\\
 From the above given options, we can see that option (A) best represents our transfer function.
 \begin{align*}
      \cfrac{2s}{(1+0.5s)(1+0.25s)^2}
-\end{align*}
+\end{align*}{}
 
 %---------------------------------------------------------------------------%
 
