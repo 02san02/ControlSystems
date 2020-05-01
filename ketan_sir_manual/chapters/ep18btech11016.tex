@@ -103,16 +103,16 @@ And,
 \begin{align}
     \omega_d = \frac{\pi}{T_p} = \omega_n\sqrt{1-\zeta^2} &= 7.634.
 \end{align}
-Hence, $\omega_n$ &= 8.919.
+Hence, $\omega_n$ = 8.919.
 
 Thus, the desired pole is located at,
 \begin{align}
     -\zeta\omega_n + j\omega_n\sqrt{1-\zeta^2} &= -4.61 + j7.634
 \end{align}
 
-Let us now assume a lead compensator zero at -5. The summation of the system's original poles and lead compensator zero to the design point is -171.2$\degre$. Thus, the compensator pole must contribute 171.2$\degree$ - 180$\degree$ &= -8.8$\degree$.
+Let us now assume a lead compensator zero at -5. The summation of the system's original poles and lead compensator zero to the design point is -171.2$\degree$. Thus, the compensator pole must contribute 171.2$\degree$ - 180$\degree$ = -8.8$\degree$.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
  \centering
     \resizebox{\columnwidth}{!}{\input{./figs/ep18btech11016/ep18btech11016_fig2.tex}}
     \caption{}
@@ -124,17 +124,17 @@ Refer figure \ref{fig:ep18btech11016_graph} for clarification.
 \begin{align}
     \tan\brak{8.8\degree} = \frac{7.634}{p_c - 4.61}
 \end{align}
-Hence, $p_c$ &= 53.92.\\
+Hence, $p_c$ = 53.92.\\
 Therefore, the compensated open-loop transfer function is,
 \begin{align}
     \frac{K}{s\brak{s+11}\brak{s+53.92}}
 \end{align}
 
-Evaluating the gain for this function at the desired pole, we get $K &= 4430$.\\
+Evaluating the gain for this function at the desired pole, we get $K = 4430$.\\
 
 \textbf{Lag Design:}
 
-The lead compensated $K_v$ &= 7.469.\\
+The lead compensated $K_v$ = 7.469.\\
 We need an improvement over the lead compensated system of,
 \begin{align}
     \frac{\brak{30}\brak{3.975}}{7.469} &= \frac{119.25}{7.469}\\
@@ -145,7 +145,7 @@ We need an improvement over the lead compensated system of,
 K_v &= \lim_{s \to 0} s G\brak{s} 
 \end{align}
 
-Choose $p_c$ (compensator pole) &= 0.001, we get $z_c$ (compensator zero) &= 0.001597.
+Choose $p_c$ (compensator pole) = 0.001, we get $z_c$ (compensator zero) = 0.001597.
 Thus, the compensator is given by, 
 \begin{align}
     G_{lag}\brak{s} &= \frac{s+0.01597}{s+0.001}
