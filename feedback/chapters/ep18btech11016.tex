@@ -1,0 +1,161 @@
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+
+\item Fig. \ref{fig:ep18btech11016_circuit} shows a feedback current amplifier. Draw the equivalent control system.
+\\
+\solution See fig \ref{fig:ep18btech11016_block}
+\\
+
+\renewcommand{\thefigure}{\theenumi.\arabic{figure}}
+\begin{figure}[!ht]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ep18btech11016/ep18btech11016_circuit.tex}}
+	\end{center}
+\caption{}
+\label{fig:ep18btech11016_circuit}
+\end{figure}
+%
+\begin{figure}[!ht]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ep18btech11016/ep18btech11016_block_diagram.tex}}
+	\end{center}
+\caption{}
+\label{fig:ep18btech11016_block}
+\end{figure}
+\renewcommand{\thefigure}{\theenumi}
+
+%--------------------------------------------------------%
+
+\item Refer table \ref{table:ep18btech11016_comps} for the parameters and draw the small signal equivalent model of the fig \ref{fig:ep18btech11016_circuit}
+\\
+\solution See fig \ref{fig:ep18btech11016_equi}
+\\
+
+\begin{table}[!ht]
+    \centering
+    \input{./tables/ep18btech11016/ep18btech11016_1.tex}
+    \caption{}
+    \label{table:ep18btech11016_comps}
+\end{table}
+
+\begin{figure}[!ht]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ep18btech11016/ep18btech11016_equi_circuit.tex}}
+	\end{center}
+\caption{}
+\label{fig:ep18btech11016_equi}
+\end{figure}
+
+%--------------------------------------------------------%
+
+\item Given G (open-loop gain), H (feedback gain) and T (closed-loop gain) as
+\begin{align}
+    G = \cfrac{I_o}{I_i}\\
+    H = \cfrac{I_f}{I_o}\\
+    T = \cfrac{I_o}{I_f}
+\end{align}
+Find G and H as a function of the resistances.
+\\
+\solution Refer fig. \ref{fig:ep18btech11016_equi},\\
+We get,
+\begin{align}
+    I_o = \mu I_i
+\end{align}
+\begin{align}
+    \implies G = \cfrac{I_o}{I_i} = \mu
+    \label{eq:open_loop_gain}
+\end{align}
+
+And,
+\begin{align}
+    I_i = I_s - I_f
+\end{align}
+
+Using eq. \ref{eq:open_loop_gain}, we get,
+\begin{align}
+    I_o = \mu \brak {I_s - I_f}
+    \label{eq:out_cur}
+\end{align}
+
+Assuming virtual ground at $V_1$, we get,
+\begin{align}
+    V_o = - I_f R_F
+\end{align}
+
+Therefore,
+\begin{align}
+    I_1 = -\cfrac{V_o}{R_M}\\
+    \implies I_1 = I_f \cfrac{R_F}{R_M}
+\end{align}
+
+The output current is also expressed as,
+\begin{align}
+    I_o = I_f + I_1\\
+    \implies \cfrac{I_o}{1 + \cfrac{R_F}{R_M}} = I_f
+\end{align}
+
+Now substituting $I_f$ in  eq. \ref{eq:out_cur} we get,
+\begin{align}
+    I_o = \mu \brak {I_s - \cfrac{I_o}{1 + \cfrac{R_F}{R_M}}}\\
+\end{align}
+\begin{align}
+    \implies T = \cfrac{I_o}{I_s} = \cfrac{\mu}{1 + \cfrac{\mu}{1 + \cfrac{R_F}{R_M}}}
+    \label{eq:closed_loop_gain}
+\end{align}
+
+Therefore,
+\begin{align}
+    \implies H = \cfrac{I_f}{I_o} = \cfrac{ 1 }{1 + \cfrac{R_F}{R_M}}
+    \label{eq:feedback_gain}
+\end{align}
+
+%--------------------------------------------------------%
+
+\item What will be closed-loop gain(T) if $\mu \to \infty$
+\\
+\solution From eq. \ref{eq:closed_loop_gain} we get,
+
+\begin{align}
+    T = \cfrac{\mu}{1 + \cfrac{\mu}{1 + \cfrac{R_F}{R_M}}}\\
+    T = \cfrac{1}{\cfrac{1}{\mu} + \cfrac{1}{1 + \cfrac{R_F}{R_M}}}
+\end{align}
+
+Applying the limit, we get,
+\begin{align}
+    \implies T = 1 + \cfrac{R_F}{R_M}
+\end{align}
+
+%--------------------------------------------------------%
+
+\item Refer table \ref{table:ep18btech11016_values} and find G, H and T
+
+\begin{table}[!ht]
+    \centering
+    \input{./tables/ep18btech11016/ep18btech11016_2.tex}
+    \caption{}
+    \label{table:ep18btech11016_values}
+\end{table}
+
+\solution Using eqs. \ref{eq:open_loop_gain}, \ref{eq:feedback_gain} and \ref{eq:closed_loop_gain}
+
+We get,
+\begin{align}
+    G = \mu = 10^4\\
+    H = \cfrac{ 1 }{1 + \cfrac{R_F}{R_M}} = 9.9 \times 10^{-3}\\
+    T = \cfrac{\mu}{1 + \cfrac{\mu}{1 + \cfrac{R_F}{R_M}}} = 100
+\end{align}
+
+%--------------------------------------------------------%
+
+\item Tabulate your results.
+\\
+\solution Refer table \ref{table:ep18btech11016_final},
+
+\begin{table}[!ht]
+    \centering
+    \input{./tables/ep18btech11016/ep18btech11016_3.tex}
+    \caption{}
+    \label{table:ep18btech11016_final}
+\end{table}
+
+\end{enumerate}
