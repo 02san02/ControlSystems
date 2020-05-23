@@ -1,4 +1,4 @@
-Details regarding files in the directory:
+# Details regarding files in the directory:
 
 buffer_fb.net is a netlist for simulating the unity feedback system rc_fb.net is a netlist for simulating the low pass RC feedback system.
 
