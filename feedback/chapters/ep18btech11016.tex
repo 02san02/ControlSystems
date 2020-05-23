@@ -1,12 +1,11 @@
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
+%--------------------------------------------------------%
 
-\item The feedback current amplifier in Fig. \ref{fig:ep18btech11016_circuit} utilizes an op amp with an input differential resistance $R_{id}$, an open-loop gain $\mu$ , and an output resistance $r_o$. The output current $I_o$ that is delivered to the load resistance $R_L$ is sensed by the feedback network composed of the two resistances $R_M$ and $R_F$ and a fraction $I_f$, is fed back to the amplifier input node. Find expressions for $G = \cfrac{I_o}{I_i}$, $H = \cfrac{I_f}{I_o}$ and $T = \cfrac{I_o}{I_s}$, assuming that the feedback causes the voltage at the input node to be near ground. If the loop gain is large, what does the closed-loop current gain become? State precisely the condition under which this is obtained. For $\mu$ = $10^4$ V/V, $R_{id}$ = 1 M$\Omega$, $r_o$ = 100 $\Omega$, $R_L$ = 10 k$\Omega$ , $R_M$ = 100 $\Omega$ , and $R_F$ = 10 k$\Omega$, find G, H, and T.
-\\
-\solution Follow the below sub-questions for solution.
-\\
+The feedback current amplifier in Fig. \ref{fig:ep18btech11016_circuit} utilizes an op amp with an input differential resistance $R_{id}$, an open-loop gain $\mu$ , and an output resistance $r_o$. The output current $I_o$ that is delivered to the load resistance $R_L$ is sensed by the feedback network composed of the two resistances $R_M$ and $R_F$ and a fraction $I_f$, is fed back to the amplifier input node. Find expressions for $G = \cfrac{I_o}{I_i}$, $H = \cfrac{I_f}{I_o}$ and $T = \cfrac{I_o}{I_s}$, assuming that the feedback causes the voltage at the input node to be near ground. If the loop gain is large, what does the closed-loop current gain become? State precisely the condition under which this is obtained. For $\mu$ = $10^4$ V/V, $R_{id}$ = 1 M$\Omega$, $r_o$ = 100 $\Omega$, $R_L$ = 10 k$\Omega$ , $R_M$ = 100 $\Omega$ , and $R_F$ = 10 k$\Omega$, find G, H, and T.\\
 
 %--------------------------------------------------------%
+
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
 
 \item Fig. \ref{fig:ep18btech11016_circuit} shows a feedback current amplifier. Draw the equivalent control system.
 \\
@@ -59,7 +58,7 @@
 \begin{align}
     G = \cfrac{I_o}{I_i}\\
     H = \cfrac{I_f}{I_o}\\
-    T = \cfrac{I_o}{I_f}
+    T = \cfrac{I_o}{I_s}
 \end{align}
 Find G and H as a function of the resistances.
 \\
@@ -73,47 +72,55 @@ We get,
     \label{eq:open_loop_gain}
 \end{align}
 
+Using nodal analysis, we get,
+\begin{align}
+    I_s = I_f + I_i
+    \label{eq:equation_1}
+\end{align}
+
 And,
 \begin{align}
-    I_i = I_s - I_f
+    I_o = I_1 + I_f\\
+    \implies \mu i_i = I_1 + I_f
+    \label{eq:equation_2}
 \end{align}
 
-Using eq. \ref{eq:open_loop_gain}, we get,
+Also,
 \begin{align}
-    I_o = \mu \brak {I_s - I_f}
-    \label{eq:out_cur}
+    V_o = - I_f R_F\\
+    V = I_i R_i\\
+    V - V_o = I_f R_F
 \end{align}
 
-Assuming virtual ground at $V_1$, we get,
+Using above equations,
 \begin{align}
-    V_o = - I_f R_F
+    I_i R_{id} + I_1 R_M = I_f R_F
+    \label{eq:equation_3}
 \end{align}
 
-Therefore,
+Therefore, from eq. \ref{eq:equation_2} and eq. \ref{eq:equation_3}, we get,
 \begin{align}
-    I_1 = -\cfrac{V_o}{R_M}\\
-    \implies I_1 = I_f \cfrac{R_F}{R_M}
+    I_i \cfrac{R_{id}}{R_M} + \mu I_i - I_f = I_f \cfrac{R_F}{R_M}\\
+    \implies \cfrac{I_f}{I_i} = \cfrac{\cfrac{R_{id}}{R_M} + \mu}{1 + \cfrac{R_F}{R_M}}
 \end{align}
 
-The output current is also expressed as,
+So,
 \begin{align}
-    I_o = I_f + I_1\\
-    \implies \cfrac{I_o}{1 + \cfrac{R_F}{R_M}} = I_f
-\end{align}
-
-Now substituting $I_f$ in  eq. \ref{eq:out_cur} we get,
-\begin{align}
-    I_o = \mu \brak {I_s - \cfrac{I_o}{1 + \cfrac{R_F}{R_M}}}\\
-\end{align}
-\begin{align}
-    \implies T = \cfrac{I_o}{I_s} = \cfrac{\mu}{1 + \cfrac{\mu}{1 + \cfrac{R_F}{R_M}}}
-    \label{eq:closed_loop_gain}
-\end{align}
-
-Therefore,
-\begin{align}
-    \implies H = \cfrac{I_f}{I_o} = \cfrac{ 1 }{1 + \cfrac{R_F}{R_M}}
+    H = \cfrac{I_f}{I_o} = \cfrac{I_f}{\mu I_i}\\
+    \implies H = \cfrac{1}{\mu}\brak{\cfrac{\cfrac{R_{id}}{R_M} + \mu}{1 + \cfrac{R_F}{R_M}}}
     \label{eq:feedback_gain}
+\end{align}
+
+Now using eq. \ref{eq:equation_1} and eq. \ref{eq:feedback_gain}, we get,
+\begin{align}
+    I_s = \brak{\cfrac{\cfrac{R_{id}}{R_M} + \mu}{1 + \cfrac{R_F}{R_M}} + 1} I_i
+\end{align}
+
+So,
+\begin{align}
+    T = \cfrac{I_o}{I_s} = \cfrac{\mu I_i}{I_s}\\
+    \implies T = \mu \brak{ \cfrac{1 + \cfrac{R_F}{R_M}}{\mu + 1 + \cfrac{R_{id}}{R_M} + \cfrac{R_F}{R_M}} }
+    \label{eq:closed_loop_gain}
 \end{align}
 
 %--------------------------------------------------------%
@@ -123,8 +130,9 @@ Therefore,
 \solution From eq. \ref{eq:closed_loop_gain} we get,
 
 \begin{align}
-    T = \cfrac{\mu}{1 + \cfrac{\mu}{1 + \cfrac{R_F}{R_M}}}\\
-    T = \cfrac{1}{\cfrac{1}{\mu} + \cfrac{1}{1 + \cfrac{R_F}{R_M}}}
+    T = \mu \brak{ \cfrac{1 + \cfrac{R_F}{R_M}}{\mu + 1 + \cfrac{R_{id}}{R_M} + \cfrac{R_F}{R_M}} }
+    \\
+    T = \cfrac{1 + \cfrac{R_F}{R_M}}{1 + \cfrac{1}{\mu} + \cfrac{R_{id}}{\mu R_M} + \cfrac{R_F}{\mu R_M}}
 \end{align}
 
 Applying the limit, we get,
@@ -148,8 +156,8 @@ Applying the limit, we get,
 We get,
 \begin{align}
     G = \mu = 10^4\\
-    H = \cfrac{ 1 }{1 + \cfrac{R_F}{R_M}} = 9.9 \times 10^{-3}\\
-    T = \cfrac{\mu}{1 + \cfrac{\mu}{1 + \cfrac{R_F}{R_M}}} = 100
+    H = \cfrac{1}{\mu}\brak{\cfrac{\cfrac{R_{id}}{R_M} + \mu}{1 + \cfrac{R_F}{R_M}}} = 1.98 \times 10^{-2}\\
+    T = \mu \brak{ \cfrac{1 + \cfrac{R_F}{R_M}}{\mu + 1 + \cfrac{R_{id}}{R_M} + \cfrac{R_F}{R_M}} } = 50.25
 \end{align}
 
 %--------------------------------------------------------%
@@ -164,5 +172,44 @@ We get,
     \caption{}
     \label{table:ep18btech11016_final}
 \end{table}
+
+%--------------------------------------------------------%
+
+\item Simulate the circuit \ref{fig:ep18btech11016_circuit} using spice simulators and plot the generated output of the gains using python script
+\\
+\solution Refer fig. \ref{fig:ep18btech11016_ol_gain}, \ref{fig:ep18btech11016_feed_gain} and \ref{fig:ep18btech11016_cl_gin} for the plots.
+
+\renewcommand{\thefigure}{\theenumi.\arabic{figure}}
+\begin{figure}[!ht]
+	\centering
+    \includegraphics[width=\columnwidth]{./figs/ep18btech11016/ep18btech11016_ol_gain.eps}
+\caption{}
+\label{fig:ep18btech11016_ol_gain}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\columnwidth]{./figs/ep18btech11016/ep18btech11016_feed_gain.eps}
+\caption{}
+\label{fig:ep18btech11016_feed_gain}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+    \includegraphics[width=\columnwidth]{./figs/ep18btech11016/ep18btech11016_cl_gain.eps}
+\caption{}
+\label{fig:ep18btech11016_cl_gin}
+\end{figure}
+\renewcommand{\thefigure}{\theenumi}
+
+Find the netlist of the simulated circuit here:
+\begin{lstlisting}
+    codes/ep18btech11016/spice/ep18btech11016.net
+\end{lstlisting}
+
+Python code used for generating the output:
+\begin{lstlisting}
+    codes/ep18betch11016/spice/ep18btech11016.py
+\end{lstlisting}
 
 \end{enumerate}
