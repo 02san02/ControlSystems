@@ -20,18 +20,6 @@ Instructions for Simulation and plotting the output.
 
 > exit
 
---> Enter the following command . This runs 'ee18btech11026_buffer.py' which plots a plot of 'ee18btech11026_buffer.dat' file and save it as 'ee18btech11026_spice_result_buffer.pdf'
+--> Enter the following command . This runs 'ep18btech11016.py' which plots all the '.dat' files and save them as 'ep18btech11016_ol_gain.pdf', 'ep18btech11016_feed_gain.pdf' and 'ep18btech11016_cl_gain.pdf'
 
-python3 ee18btech11026_buffer.py
-
--->Enter the following command . This simulates the 'rc_fb.net' file and creates a 'ee18btech11026_rc_fb.dat' file.
-
-ngspice rc_fb.net
-
---> Exit from ngspice cmd line using the following code . This gets you back to the present working directory.
-
-exit
-
---> Enter the following command . This runs 'ee18btech11026_rc_fb.py' which plots a plot of 'ee18btech11026_rc_fb.dat' file and save it as 'ee18btech11026_spice_result_rc_bf_mag.pdf'
-
-python3 ee18btech11026_rc_fb.py
+> python3 ep18btech11016.py
