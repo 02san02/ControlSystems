@@ -1,49 +1,31 @@
 Current Feedback Amplifier
 
-** Defining parameters for output**
-.CSPARAM RID = 1MegOhm
-.CSPARAM RL_1 = 10kOhm
-.CSPARAM RF_1 = 10kOhm
+** Including necessary files **
+.include OPAMP.MOD
+
+** Defining parameters for output **
+.CSPARAM RF=10k
+.CSPARAM RL=10k
 
 ** Circuit Description **
-
-RL	3 	4 	10k
-Rm	0 	4 	100
-Is	0 	2 	1m
-Rf	2	4	10k
-XOP	0 2 3	OPAMP1
-
-* OPAMP MACRO MODEL
-* connections:      non-inverting input
-*                   |   inverting input
-*                   |   |   output
-*                   |   |   |
-.SUBCKT OPAMP1      1   2   4
-.PARAM Ri = 1MegOhm
-.PARAM RO = 100Ohm
-.PARAM GAIN = 10k
-* INPUT IMPEDANCE
-RIN	1	2	Ri
-* OUTPUT GAIN AND RESISTANCE
-B1 	3 	0 	I=((V(2)-V(1))/Ri)*GAIN
-ROUT	3	4	RO
-.ENDS
+I1 0 N1 1m
+RF N1 N2 10k
+RM N2 0 100
+RL N2 N4 10k
+XU2 0 N1 N4 OPAMP1
 
 ** Analysis Request **
-.tran 0.01 10
+.tran 0.1 10
 
 ** Output Request **
 .control
 
 run
-* Io = (V(4) - V(3))/RL_1
-* Ii = V(2)/RID
+* If = (V(N1) - V(N2))/RF
 * Is = 1m
-* If = (V(2) - V(4))/RF_1
+* Io = (V(N2) - V(N4))/RL
 
-wrdata ep18btech11016_ol_gain.dat RID*(V(4) - V(3))/(V(2)*RL_1)
-wrdata ep18btech11016_feed_gain.dat (RL_1*(V(2) - V(4)))/((V(4) - V(3))*RF_1)
-wrdata ep18btech11016_cl_gain.dat (V(4) - V(3))/(RL_1*1m)
-
+wrdata ep18btech11016_feed_gain.dat (V(N1) - V(N2))/(V(N2) - V(N4))
+wrdata ep18btech11016_cl_gain.dat (V(N2) - V(N4))/(RL*1m)
 .endc
 .end
