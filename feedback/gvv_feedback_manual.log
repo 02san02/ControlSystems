@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.13)  25 MAY 2020 09:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.13)  25 MAY 2020 14:57
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1292,36 +1292,32 @@ LaTeX Info: Redefining \nameref on input line 89.
 \c@lemma=\count283
 \c@example=\count284
 \c@rem=\count285
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 223.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 225.
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 22
-3.
+5.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 2
-23.
+25.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 2
-23.
+25.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 2
-23.
+25.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 2
-23.
+25.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
-) (/compile/output.toc)
-\tf@toc=\write5
-\openout5 = `output.toc'.
-
-(/compile/chapters/ep18btech11016.tex
+) (/compile/chapters/ep18btech11016.tex
 Underfull \hbox (badness 10000) in paragraph at lines 12--16
 
  []
@@ -1347,32 +1343,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--41
 \realshift=\dimen333
 \realshift=\dimen334
 \realshift=\dimen335
-) [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-] (/compile/./figs/ep18btech11016/ep18btech11016_open.tex
+) (/compile/./figs/ep18btech11016/ep18btech11016_open.tex
 \realshift=\dimen336
 \realshift=\dimen337
 ) (/compile/./figs/ep18btech11016/ep18btech11016_feed.tex) (/compile/./figs/ep1
 8btech11016/ep18btech11016_feed_circuit.tex
 \realshift=\dimen338
 \realshift=\dimen339
-) [2] (/compile/./tables/ep18btech11016/ep18btech11016_2.tex) (/compile/./table
-s/ep18btech11016/ep18btech11016_3.tex)
+) [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[2] (/compile/./tables/ep18btech11016/ep18btech11016_2.tex) (/compile/./tables/
+ep18btech11016/ep18btech11016_3.tex)
 Package epstopdf Info: Source file: <./figs/ep18btech11016/ep18btech11016_feed_
 gain.eps>
-(epstopdf)                    date: 2020-05-25 09:10:54
+(epstopdf)                    date: 2020-05-25 14:53:38
 (epstopdf)                    size: 1872702 bytes
 (epstopdf)             Output file: <./figs/ep18btech11016/ep18btech11016_feed_
 gain-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-05-25 09:11:10
+(epstopdf)                    date: 2020-05-25 14:53:48
 (epstopdf)                    size: 19433 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/ep18btech11016/ep18b
 tech11016_feed_gain-eps-converted-to.pdf ./figs/ep18btech11016/ep18btech11016_f
 eed_gain.eps>
 (epstopdf)             \includegraphics on input line 207.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/ep18btech11016/ep18btech11016_feed_gain-eps-converted-to.pdf, id=81, 25
+<./figs/ep18btech11016/ep18btech11016_feed_gain-eps-converted-to.pdf, id=75, 25
 2.945pt x 189.70876pt>
 File: ./figs/ep18btech11016/ep18btech11016_feed_gain-eps-converted-to.pdf Graph
 ic file (type pdf)
@@ -1382,18 +1381,18 @@ verted-to.pdf  used on input line 207.
 (pdftex.def)             Requested size: 252.0pt x 189.00485pt.
 Package epstopdf Info: Source file: <./figs/ep18btech11016/ep18btech11016_cl_ga
 in.eps>
-(epstopdf)                    date: 2020-05-25 09:10:54
+(epstopdf)                    date: 2020-05-25 14:53:38
 (epstopdf)                    size: 1872702 bytes
 (epstopdf)             Output file: <./figs/ep18btech11016/ep18btech11016_cl_ga
 in-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-05-25 09:11:16
+(epstopdf)                    date: 2020-05-25 14:53:52
 (epstopdf)                    size: 17412 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/ep18btech11016/ep18b
 tech11016_cl_gain-eps-converted-to.pdf ./figs/ep18btech11016/ep18btech11016_cl_
 gain.eps>
 (epstopdf)             \includegraphics on input line 214.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/ep18btech11016/ep18btech11016_cl_gain-eps-converted-to.pdf, id=82, 252.
+<./figs/ep18btech11016/ep18btech11016_cl_gain-eps-converted-to.pdf, id=76, 252.
 945pt x 189.70876pt>
 File: ./figs/ep18btech11016/ep18btech11016_cl_gain-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -1409,31 +1408,30 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
 Package rerunfilecheck Info: File `output.out' has not changed.
-(rerunfilecheck)             Checksum: B5E06EC89EA513B3195C61DDA74DD180;61.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
  ) 
 Here is how much of TeX's memory you used:
- 39103 strings out of 492164
- 866584 string characters out of 6125314
- 1109113 words of memory out of 5000000
- 42670 multiletter control sequences out of 15000+600000
- 101537 words of font info for 239 fonts, out of 8000000 for 9000
+ 39089 strings out of 492164
+ 866456 string characters out of 6125314
+ 1117996 words of memory out of 5000000
+ 42665 multiletter control sequences out of 15000+600000
+ 99147 words of font info for 235 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 60i,13n,73p,969b,1224s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,73p,969b,1218s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2019/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/
 2019/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2019/t
 exmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2019/texmf-di
-st/fonts/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/2019/texmf-dist/fon
-ts/type1/public/txfonts/txbsy.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/public/txfonts/txsy.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/
-times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb
-i8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /compile/output.pdf (3 pages, 107486 bytes).
+st/fonts/type1/public/txfonts/txbsy.pfb></usr/local/texlive/2019/texmf-dist/fon
+ts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
+1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on /compile/output.pdf (3 pages, 93623 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 48 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
