@@ -4,8 +4,8 @@ Current Feedback Amplifier
 .include OPAMP.MOD
 
 ** Defining parameters for output **
-.CSPARAM RF=10k
-.CSPARAM RL=10k
+.CSPARAM RF=10kOhm
+.CSPARAM RL=10kOhm
 
 ** Circuit Description **
 I1 0 N001 1m
@@ -27,5 +27,6 @@ run
 
 wrdata ep18btech11016_feed_gain.dat (V(N001)-V(N002))/(V(N002)-V(N004))
 wrdata ep18btech11016_cl_gain.dat (V(N002)-V(N004))/(RL*1m)
+
 .endc
 .end
