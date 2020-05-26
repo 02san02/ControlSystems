@@ -14,11 +14,11 @@ plt.ylabel("Gain")
 plt.title("Feedback gain")
 
 # if using termux
-#plt.savefig('./figs/ep18btech11016/ep18btech11016_feed_gain.pdf')
-#plt.savefig('./figs/ep18btech11016/ep18btech11016_feed_gain.eps')
-#subprocess.run(shlex.split("termux-open ./figs/ep18btech11016/ep18btech11016_feed_gain.pdf"))
+plt.savefig('./figs/ep18btech11016/ep18btech11016_feed_gain.pdf')
+plt.savefig('./figs/ep18btech11016/ep18btech11016_feed_gain.eps')
+subprocess.run(shlex.split("termux-open ./figs/ep18btech11016/ep18btech11016_feed_gain.pdf"))
 # else
-plt.show()
+#plt.show()
 
 data2 = np.loadtxt('ep18btech11016_cl_gain.dat')  
 plt.plot(data2[:,0],data2[:,1])  
@@ -28,10 +28,10 @@ plt.ylabel("Gain")
 plt.title("Closed loop gain")
 
 # if using termux
-#plt.savefig('./figs/ep18btech11016/ep18btech11016_cl_gain.pdf')
-#plt.savefig('./figs/ep18btech11016/ep18btech11016_cl_gain.eps')
-#subprocess.run(shlex.split("termux-open ./figs/ep18btech11016/ep18btech11016_cl_gain.pdf"))
+plt.savefig('./figs/ep18btech11016/ep18btech11016_cl_gain.pdf')
+plt.savefig('./figs/ep18btech11016/ep18btech11016_cl_gain.eps')
+subprocess.run(shlex.split("termux-open ./figs/ep18btech11016/ep18btech11016_cl_gain.pdf"))
 # else
-plt.show()
+#plt.show()
 
 
