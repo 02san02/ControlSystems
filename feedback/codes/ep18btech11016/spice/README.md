@@ -2,7 +2,7 @@
 
 ep18btech11016.net is a netlist for simulating the curent feedback amplifier.
 
-ep18btech11016.py is a python file to plot the 'ep18btech11016_ol_gain.dat', 'ep18btech11016_feed_gain.dat' and 'ep18btech11016_cl_gain.dat'.
+ep18btech11016.py is a python file to plot the 'ep18btech11016_feed_gain.dat' and 'ep18btech11016_cl_gain.dat'.
 
 Instructions for Simulation and plotting the output.
 ## Setup
@@ -12,7 +12,7 @@ Instructions for Simulation and plotting the output.
 
 ## Simulation :
 
--->Enter the following command . This simulates the 'ep18btech11016.net' file and creates the 'ep18btech11016_ol_gain.dat', 'ep18btech11016_feed_gain.dat' and 'ep18btech11016_cl_gain.dat' files.
+-->Enter the following command . This simulates the 'ep18btech11016.net' file and creates the 'ep18btech11016_feed_gain.dat' and 'ep18btech11016_cl_gain.dat' files.
 
 > ngspice ep18btech11016.net
 
@@ -20,6 +20,6 @@ Instructions for Simulation and plotting the output.
 
 > exit
 
---> Enter the following command . This runs 'ep18btech11016.py' which plots all the '.dat' files and save them as 'ep18btech11016_ol_gain.pdf', 'ep18btech11016_feed_gain.pdf' and 'ep18btech11016_cl_gain.pdf'
+--> Enter the following command . This runs 'ep18btech11016.py' which plots all the '.dat' files and save them as 'ep18btech11016_feed_gain.pdf' and 'ep18btech11016_cl_gain.pdf'
 
 > python3 ep18btech11016.py
